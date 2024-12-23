@@ -12,6 +12,7 @@ const PostAuthor = () => {
         <div className="post_author_details">
             <h5>By: James Gunner</h5>
             <small>Just Now</small>
+            <small>Location: Accra</small>
         </div>
     </Link>
   )
