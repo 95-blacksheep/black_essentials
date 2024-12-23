@@ -298,6 +298,9 @@ footer {
 }
 
 
+
+
+
 /* --------------- 404 Page Anime ---------- */ 
 .ball {
   position: relative;
@@ -354,7 +357,7 @@ footer {
 }
 
 
-/* Post Card Styles */
+/*---------------- Post Card Styles ---------*/
 
 .posts_container {
   display: grid;
@@ -492,6 +495,11 @@ footer {
   -ms-border-radius: .5rem;
   -o-border-radius: .5rem;
   margin-bottom: 5rem;
+}
+
+
+.post_detail:hover {
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
 }
 
 
