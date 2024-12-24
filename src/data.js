@@ -5,7 +5,6 @@ import Thumbnail5 from "./images/Thumbnail5.png";
 import Thumbnail6 from "./images/Thumbnail6.png";
 import Thumbnail7 from "./images/Thumbnail7.png";
 import Thumbnail8 from "./images/Thumbnail8.png";
-
 import Thumbnail1 from "./images/Thumbnail1.png"
 
 
