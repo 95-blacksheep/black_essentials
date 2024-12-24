@@ -25,6 +25,20 @@
   font-style: normal;
 
   letter-spacing: 1.2px;
+
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color_variant);
+    border-radius: 50%;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 }
 
 
@@ -110,7 +124,27 @@ body {
 .btn_primary {
   background-color: var(--color_variant);
   color: var(--color_bg);
+  padding: .3rem .5rem;
+  border-radius: var(--border_radius);
+  -webkit-border-radius: var(--border_radius);
+  -moz-border-radius: var(--border_radius);
+  -ms-border-radius: var(--border_radius);
+  -o-border-radius: var(--border_radius);
+  font-weight: 800;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
+
+
+.btn_primary:hover {
+  background-color: var(--text_color);
+  color: var(--color_bg);
+}
+
+
 
 .btn.category {
   background-color: var(--color_variant_light);
@@ -132,7 +166,7 @@ body {
 
 .btn.category:hover {
   background-color: var(--text_color);
-  color: var(bg);
+  color: var(--color_bg);
 }
 
 .btn.sm {
@@ -598,7 +632,7 @@ footer {
   height: 2rem;
   background-color: var(--text_color);
   color: var(--color_bg_deep);
-  font-weight: 800;
+  font-weight: 600;
   padding: .5rem;
   border-radius: .5rem;
   -webkit-border-radius: .5rem;
@@ -641,6 +675,8 @@ input:focus, select:focus {
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
+  border: 2px solid var(--color_variant_light);
+
 }
 
 .register_form button h4 {
@@ -782,6 +818,9 @@ input:focus, select:focus {
   -ms-transform: translateX(.5rem);
   -o-transform: translateX(.5rem);
 }
+
+
+
 .author_avatar {
   height: 5rem;
   width: 7rem;
@@ -795,6 +834,7 @@ input:focus, select:focus {
 }
 
 
+
 .author_avatar img {
   width: 100%;
   height: auto;
@@ -805,6 +845,8 @@ input:focus, select:focus {
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
 }
+
+
 
 .author_avatar img:hover {
   transform: scale(1.1);
@@ -818,5 +860,132 @@ input:focus, select:focus {
 .author_info {
   display: grid;
   gap: 1rem;
+}
+
+
+
+.profile_container {
+  margin-top: 5rem;
+  width: 40rem;
+  margin-inline: auto;
+  background-color: var(--color_bg_light);
+  padding: 2.5rem;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+  margin-bottom: 5rem;
+  place-items: center;
+  text-align: center;
+  display: grid;
+  gap: .5rem;
+}
+
+
+
+.profile_container:hover {
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.avatar_container {
+  width: 13rem;
+  height: 14rem;
+  margin-inline: auto;
+  object-fit: contain;
+  position: relative;
+}
+
+.avatar_container img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 2px solid var(--color_variant);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.avatar_container img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  filter: saturate(0);
+  -webkit-filter: saturate(0);
+}
+
+.avatar_form {
+  height: 1rem;
+}
+
+.avatar_form  input {
+  visibility: hidden;
+}
+
+
+.avatar_form label, .profile_avatar_btn {
+  background-color: var(--color_bg);
+  color: var(--text_color);
+  font-size: .5rem;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  place-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  bottom: 2.6rem;
+  right: 7rem;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  border: 1px solid var(--color_variant_light);
+}
+
+.avatar_form label:hover, .profile_avatar_btn:hover {
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+
+}
+
+
+.profile_container h3 {
+  margin-top: -2rem;
+}
+
+.profile_details {
+  position: relative;
+}
+
+
+
+
+.profile_container .register_form {
+  margin-top: 2rem;
+  gap: .8rem;
+}
+
+
+.profile_container #btn_primary {
+  font-size: .7rem;
+  padding: .1rem .3rem;
+  opacity: .7;
+}
+
+.profile_container #btn_primary:hover {
+  opacity: 1;
 }
 
