@@ -2,7 +2,7 @@
 
 
 
-/* General Styles */
+/*---------------- General Styles---------- */
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +28,7 @@
 }
 
 
-/* Variables */
+/*---------------  Variables------------- */
 :root {
   --color_bg_light: rgb(38, 38, 38);
   --color_bg: rgb(27, 27, 27);
@@ -45,7 +45,7 @@
 }
 
 
-/* Font Styles */
+/*---------------- Font Styles---------- */
 h1 {
   font-size: 1.6rem;
   font-weight: 500;
@@ -266,6 +266,10 @@ footer {
 
 
 
+
+
+/* ----------------  Error Page 4o4  ----------- */
+
 .error_page {
   display: flex;
   flex-direction: column;
@@ -301,7 +305,7 @@ footer {
 
 
 
-/* --------------- 404 Page Anime ---------- */ 
+/* --------------- 4o4 Page Anime ---------- */ 
 .ball {
   position: relative;
   bottom: 50px;
@@ -355,6 +359,11 @@ footer {
     transform: rotate(0deg);
   }
 }
+
+
+
+
+
 
 
 /*---------------- Post Card Styles ---------*/
@@ -480,7 +489,7 @@ footer {
 
 
 
-/* Post Detail Styles */
+/* --------- Post Detail Styles ----------- */
 .post_detail {
   margin-top: 5rem;
   width: 40rem;
@@ -542,5 +551,166 @@ footer {
 
 
 
+
+
+
+/* ----------------  Register Page  ----------- */
+
+.register {
+  margin-top: 10rem;
+  width: 40rem;
+  margin-inline: auto;
+  background-color: var(--color_bg_light);
+  padding: 1rem;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+}
+
+.register:hover {
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.form_container {
+  display: grid;
+  gap: 2rem;
+}
+
+
+.register_form {
+  display: grid;
+  width: 25rem;
+  margin-inline: auto;
+  gap: 1rem;
+}
+
+
+ input, select {
+  height: 2rem;
+  background-color: var(--text_color);
+  color: var(--color_bg_deep);
+  font-weight: 800;
+  padding: .5rem;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+  border: 2px solid var(--color_bg_deep);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+
+input:hover, select:hover {
+  opacity: 0.6;
+}
+
+input:focus, select:focus {
+  border: 2px solid var(--color_variant);
+  transform: translateX(.5rem);
+  -webkit-transform: translateX(.5rem);
+  -moz-transform: translateX(.5rem);
+  -ms-transform: translateX(.5rem);
+  -o-transform: translateX(.5rem);
+}
+
+
+.register_form button {
+  width: 6rem;
+  height: 1.7rem;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.register_form button h4 {
+  color: var(--color_bg_deep);
+  font-weight: 900;
+}
+
+
+.register_form button:hover {
+  background-color: var(--text_color);
+  cursor: pointer;
+  border: 2px solid var(--color_variant);
+}
+
+
+
+
+
+
+
+.alert_message {
+  z-index: 4;
+  opacity: .8;
+  width: 25rem;
+  padding: .2rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  position: fixed;
+  right: -1rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  transform: translateX(100%);
+  animation: moveleft 0.3s linear forwards;
+  top: 3rem;
+}
+
+
+@keyframes moveleft {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.alert_message::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  animation: anim 20s linear forwards;
+  -webkit-animation: anim 20s linear forwards;
+}
+
+@keyframes anim {
+  100% {
+    width: 0;
+  }
+}
+
+
+.alert_message p {
+  font-size: .9rem;
+}
+
+.alert_message.error p {
+  color: white;
+}
+
+.alert_message.error {
+  background-color: var(--color_danger);
+}
+
+.alert_message.success {
+  background-color: var(--color_variant);
+}
 
 
