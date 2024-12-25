@@ -31,7 +31,7 @@ const Login = () => {
             name="email"
             value={userData.email}
             onChange={changeInputHandler}
-          autoFocus/>
+          />
 
           <input
             type="password"
@@ -42,7 +42,7 @@ const Login = () => {
           />
 
           <button type="submit" className="btn_primary">
-            <h4>Login</h4>
+            <h4>Signin</h4>
           </button>
         </form>
 

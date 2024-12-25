@@ -25,20 +25,6 @@
   font-style: normal;
 
   letter-spacing: 1.2px;
-
-  overflow-x: hidden;
-  ::-webkit-scrollbar {
-    width: 3px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--color_variant);
-    border-radius: 50%;
-  }
-
-  ::-webkit-scrollbar-corner {
-    background: transparent;
-  }
 }
 
 
@@ -53,6 +39,7 @@
   --text_color: #e7e7e7;
 
   --transition: all 300ms ease;
+  --box_shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
   --opacity: 0.9;
 
   --border_radius: 0.5rem;
@@ -124,27 +111,7 @@ body {
 .btn_primary {
   background-color: var(--color_variant);
   color: var(--color_bg);
-  padding: .3rem .5rem;
-  border-radius: var(--border_radius);
-  -webkit-border-radius: var(--border_radius);
-  -moz-border-radius: var(--border_radius);
-  -ms-border-radius: var(--border_radius);
-  -o-border-radius: var(--border_radius);
-  font-weight: 800;
-  transition: var(--transition);
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
 }
-
-
-.btn_primary:hover {
-  background-color: var(--text_color);
-  color: var(--color_bg);
-}
-
-
 
 .btn.category {
   background-color: var(--color_variant_light);
@@ -166,7 +133,7 @@ body {
 
 .btn.category:hover {
   background-color: var(--text_color);
-  color: var(--color_bg);
+  color: var(bg);
 }
 
 .btn.sm {
@@ -436,7 +403,7 @@ footer {
 }
 
 .post:hover {
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box_shadow);
 }
 
 
@@ -549,7 +516,7 @@ footer {
 
 
 .post_detail:hover {
-    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+    box-shadow: var(--box_shadow);
 }
 
 
@@ -611,7 +578,7 @@ footer {
 }
 
 .register:hover {
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box_shadow);
 }
 
 .form_container {
@@ -631,7 +598,7 @@ footer {
  input, select {
   height: 2rem;
   background-color: var(--text_color);
-  color: var(--color_bg_deep);
+  color: black;
   font-weight: 600;
   padding: .5rem;
   border-radius: .5rem;
@@ -639,7 +606,7 @@ footer {
   -moz-border-radius: .5rem;
   -ms-border-radius: .5rem;
   -o-border-radius: .5rem;
-  border: 2px solid var(--color_bg_deep);
+  border: 1px solid var(--color_bg_deep);
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
@@ -649,11 +616,11 @@ footer {
 
 
 input:hover, select:hover {
-  opacity: 0.6;
+  opacity: .8;
 }
 
 input:focus, select:focus {
-  border: 2px solid var(--color_variant);
+  border: 1px solid var(--color_variant);
   transform: translateX(.5rem);
   -webkit-transform: translateX(.5rem);
   -moz-transform: translateX(.5rem);
@@ -675,8 +642,6 @@ input:focus, select:focus {
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
-  border: 2px solid var(--color_variant_light);
-
 }
 
 .register_form button h4 {
@@ -688,7 +653,7 @@ input:focus, select:focus {
 .register_form button:hover {
   background-color: var(--text_color);
   cursor: pointer;
-  border: 2px solid var(--color_variant);
+  border: 1px solid var(--color_variant);
 }
 
 
@@ -787,7 +752,7 @@ input:focus, select:focus {
 }
 
 .authors_container:hover {
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box_shadow);
 }
 
 
@@ -810,7 +775,7 @@ input:focus, select:focus {
 }
 
 .author:hover {
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box_shadow);
   opacity: .6;
   transform: translateX(.5rem);
   -webkit-transform: translateX(.5rem);
@@ -818,9 +783,6 @@ input:focus, select:focus {
   -ms-transform: translateX(.5rem);
   -o-transform: translateX(.5rem);
 }
-
-
-
 .author_avatar {
   height: 5rem;
   width: 7rem;
@@ -834,7 +796,6 @@ input:focus, select:focus {
 }
 
 
-
 .author_avatar img {
   width: 100%;
   height: auto;
@@ -845,8 +806,6 @@ input:focus, select:focus {
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
 }
-
-
 
 .author_avatar img:hover {
   transform: scale(1.1);
@@ -861,6 +820,16 @@ input:focus, select:focus {
   display: grid;
   gap: 1rem;
 }
+
+
+
+
+
+
+
+
+
+/*---------------- Profile Styles---------- */
 
 
 
@@ -885,7 +854,7 @@ input:focus, select:focus {
 
 
 .profile_container:hover {
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box_shadow);
 }
 
 .avatar_container {
@@ -895,6 +864,11 @@ input:focus, select:focus {
   object-fit: contain;
   position: relative;
 }
+
+
+
+
+
 
 .avatar_container img {
   width: 100%;
@@ -913,6 +887,9 @@ input:focus, select:focus {
   -o-transition: var(--transition);
 }
 
+
+
+
 .avatar_container img:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -921,6 +898,7 @@ input:focus, select:focus {
   -o-transform: scale(1.1);
   filter: saturate(0);
   -webkit-filter: saturate(0);
+  box-shadow: var(--box_shadow);
 }
 
 .avatar_form {
@@ -957,7 +935,7 @@ input:focus, select:focus {
 }
 
 .avatar_form label:hover, .profile_avatar_btn:hover {
-  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box_shadow);
 
 }
 
@@ -982,10 +960,40 @@ input:focus, select:focus {
 .profile_container #btn_primary {
   font-size: .7rem;
   padding: .1rem .3rem;
+  font-weight: 800;
   opacity: .7;
+  border-radius: var(--border_radius);
+  -webkit-border-radius: var(--border_radius);
+  -moz-border-radius: var(--border_radius);
+  -ms-border-radius: var(--border_radius);
+  -o-border-radius: var(--border_radius);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
 
 .profile_container #btn_primary:hover {
   opacity: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
