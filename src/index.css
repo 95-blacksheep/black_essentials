@@ -25,6 +25,8 @@
   font-style: normal;
 
   letter-spacing: 1.2px;
+
+  
 }
 
 
@@ -111,6 +113,8 @@ body {
 .btn_primary {
   background-color: var(--color_variant);
   color: var(--color_bg);
+  border: 1px solid var(--color_bg_deep);
+  font-weight: 700;
 }
 
 .btn.category {
@@ -654,6 +658,75 @@ input:focus, select:focus {
   background-color: var(--text_color);
   cursor: pointer;
   border: 1px solid var(--color_variant);
+}
+
+
+
+
+
+/*---------------- React Quill Styles---------- */
+/* Style the editor container */
+#editor {
+  width: 100%;       
+  max-width: 600px;  
+  margin: 0 auto;   
+  box-sizing: border-box;
+}
+
+#create_post {
+  margin-bottom: 10rem;
+}
+
+/* Style the content area of the editor */
+.ql-editor {
+  min-height: 10rem !important;
+  max-height: 30rem !important;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  line-height: 1.4;
+}
+
+
+.ql-editor h1, h2, h3, h4, h5 {
+  font-weight: bold;
+  color: var(--text_color);
+  margin-bottom: .5rem;
+}
+
+
+
+/* Customize headers inside the Quill editor */
+.ql-editor h1 {
+  font-size: 1.6rem;  
+}
+
+.ql-editor h2 {
+  font-size: 1.3rem;    
+}
+
+.ql-editor h3 {
+  font-size: 1rem;  
+}
+
+/* Add custom styling for other header levels if necessary */
+.ql-editor h4, .ql-editor h5, .ql-editor h6 {
+  font-size: .9rem;
+}
+
+
+.ql-editor img {
+  min-height: 10rem !important;
+  max-height: 20rem !important;
+  min-width: 12rem !important;
+  max-width: 22rem !important;
+  object-fit: cover;       
+  display: block;           
+  margin-left: auto;       
+  margin-right: auto;       
 }
 
 
