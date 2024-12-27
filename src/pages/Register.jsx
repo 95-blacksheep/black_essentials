@@ -58,7 +58,7 @@ const Register = () => {
           />
 
           <button type="submit" className="btn_primary">
-            <h4>Submit</h4>
+            Submit
           </button>
         </form>
 

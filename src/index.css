@@ -579,6 +579,7 @@ footer {
   -moz-border-radius: .5rem;
   -ms-border-radius: .5rem;
   -o-border-radius: .5rem;
+  margin-bottom: 10rem;
 }
 
 .register:hover {
@@ -661,6 +662,42 @@ input:focus, select:focus {
 }
 
 
+select option {
+  background-color: var(--color_bg_light);
+}
+
+
+
+
+/* Remove default background and border */
+input[type="file"] {
+  background-color: transparent !important; /* Remove background color */
+  border: none !important; /* Remove the border */
+  padding: 0 !important; /* Remove padding */
+  outline: none !important; /* Remove focus outline */
+}
+
+/* Optional: Style the input (you can adjust this part to suit your needs) */
+input[type="file"]::-webkit-file-upload-button {
+  border: none;
+  padding: .1rem .2rem;
+  cursor: pointer;
+  border-radius: var(--border_radius) ;
+  -webkit-border-radius: var(--border_radius) ;
+  -moz-border-radius: var(--border_radius) ;
+  -ms-border-radius: var(--border_radius) ;
+  -o-border-radius: var(--border_radius) ;
+}
+
+/* Ensure the input does not show any default styling in Firefox */
+input[type="file"]::-moz-file-upload-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+
 
 
 
@@ -673,9 +710,6 @@ input:focus, select:focus {
   box-sizing: border-box;
 }
 
-#create_post {
-  margin-bottom: 10rem;
-}
 
 /* Style the content area of the editor */
 .ql-editor {

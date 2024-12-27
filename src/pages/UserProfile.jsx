@@ -48,7 +48,7 @@ const UserProfile = () => {
 
         <h3>James Gunner</h3>
 
-        <Link to={"/my_posts/xxx"} className="btn_primary" id="btn_primary">
+        <Link to={"/my_posts/"} className="btn_primary" id="btn_primary">
           My Dashboard
         </Link>
 

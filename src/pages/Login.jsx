@@ -42,12 +42,12 @@ const Login = () => {
           />
 
           <button type="submit" className="btn_primary">
-            <h4>Signin</h4>
+            Signin
           </button>
         </form>
 
         <small>
-          Don't have an account? <Link to="/register">Sign Up Here</Link>
+          Don't have an account? <Link to="/register"><p>Sign Up Here</p></Link>
         </small>
       </div>
     </section>

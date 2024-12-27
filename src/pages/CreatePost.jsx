@@ -56,7 +56,7 @@ const CreatePost = () => {
 
           <ReactQuill modules={modules}  formats={formats} value={desc} onChange={setDesc}/>
 
-          <input type="file" onChange={e => setThumbnail(e.target.files(0))} accept='png, jpg, jpeg' />
+          <input type="file" onChange={e => setThumbnail(e.target.file[0])} accept='png, jpg, jpeg' />
 
           <button type='submit' className='btn_primary' >Post</button>
         </div>
