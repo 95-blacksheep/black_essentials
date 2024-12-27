@@ -17,16 +17,14 @@ const Register = () => {
   };
 
   return (
-    
     <section className="register">
-<ErrorMessage />
-
+      
+      <ErrorMessage />
 
       <div className="form_container">
         <h2>Sign Up</h2>
 
         <form className="register_form">
-         
           <input
             type="text"
             placeholder="Full Name"
