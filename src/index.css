@@ -25,7 +25,7 @@
   letter-spacing: 1.2px;
 }
 
-/*---------------  Variables------------- */
+/*---------------  Variables ------------- */
 :root {
   --color_bg_light: rgb(38, 38, 38);
   --color_bg: rgb(27, 27, 27);
@@ -127,11 +127,6 @@ body {
 .btn.category:hover {
   background-color: var(--text_color);
   color: var(bg);
-}
-
-.btn.sm {
-  font-size: 0.8rem;
-  padding: 0.3rem 0.7rem;
 }
 
 .btn_danger {
